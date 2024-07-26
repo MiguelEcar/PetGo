@@ -2,6 +2,7 @@ import * as Yup from 'yup';
 
 
 const newOid = {
+    id: '',
     name: '',
     description: '',
     imageUrl: '',

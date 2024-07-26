@@ -7,6 +7,9 @@ import {
     CREATE_ANIMAL_PENDING,
     CREATE_ANIMAL_SUCCESS,
     CREATE_ANIMAL_FAILURE,
+    CHANGE_ANIMAL_STATUS_PENDING,
+    CHANGE_ANIMAL_STATUS_SUCCESS,
+    CHANGE_ANIMAL_STATUS_FAILURE,
 } from './actionTypes';
 
 
@@ -22,6 +25,7 @@ function animalReducer(state = initialState, action) {
                 loading: false,
                 oid: action.oid
             }
+        case CHANGE_ANIMAL_STATUS_PENDING:
         case LIST_ANIMAL_PENDING:
         case CREATE_ANIMAL_PENDING:
             return {
@@ -42,12 +46,14 @@ function animalReducer(state = initialState, action) {
                 loading: false
             }
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        case CHANGE_ANIMAL_STATUS_SUCCESS:
         case CREATE_ANIMAL_SUCCESS:
             return {
                 ...state,
                 loading: false,
                 oid: action.oid
             }
+        case CHANGE_ANIMAL_STATUS_FAILURE:
         case CREATE_ANIMAL_FAILURE:
             return {
                 ...state,

@@ -15,6 +15,7 @@ import { Input } from '@theme';
 
 import {
     LIST_ANIMAL,
+    CHANGE_ANIMAL_STATUS
 } from '@model';
 
 import { AnimalNew } from './AnimalNew';
@@ -31,6 +32,13 @@ class Animal extends React.Component {
     // /////////////////////////////////////////////////////////////////////////////
     async componentDidMount() {
         await this.props.listAnimal();
+    }
+    // /////////////////////////////////////////////////////////////////////////////
+
+    // /////////////////////////////////////////////////////////////////////////////
+    onSubmit = async (values) => {
+        await this.props.changeAnimalStatus(values);
+        this.props.reloadPage();
     }
     // /////////////////////////////////////////////////////////////////////////////
 
@@ -81,6 +89,7 @@ class Animal extends React.Component {
                                                                         placeholder={t('animal_status')}
                                                                         name='status'
                                                                         type='checkbox'
+                                                                        onChange={(values) => this.onSubmit(values)}
                                                                     />
                                                                 </Row>
                                                                 {/* // ///////////////////////////////////////////////////////////// */}
@@ -109,7 +118,8 @@ export function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        listAnimal: () => dispatch({ type: LIST_ANIMAL })
+        listAnimal: () => dispatch({ type: LIST_ANIMAL }),
+        changeAnimalStatus: (data) => dispatch({ type: CHANGE_ANIMAL_STATUS, data }),
     }
 }
 
