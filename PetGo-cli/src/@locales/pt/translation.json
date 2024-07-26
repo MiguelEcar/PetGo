@@ -1,0 +1,22 @@
+{
+    "def_hello": "Olá, ",
+    "def_return": "Voltar",
+    "def_cancel": "Cancelar",
+    "def_close": "Fechar",
+    "def_removed": "Excluída",
+
+    "access_server_error": "Erro ao acessar o servidor! =( ",
+    
+    "def_btn_add": "Adicionar",
+    "def_modal_new": "Novo",
+
+    "animal_page_title": "Animais",
+    "animal_name": "Nome",
+    "animal_desc": "Descrição",
+    "animal_imageUrl": "Link para Imagem",
+    "animal_birthDate": "Data de Nascmimento",
+    "animal_status": "Adotado?",
+    "animal_category": "Categoryia",
+
+    "": ""
+}
