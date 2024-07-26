@@ -8,8 +8,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -51,6 +53,24 @@ public class AnimalResource {
     public ResponseEntity<List<Animal>> list() throws MyException {
         List<Animal> list = this.service.findAll();
         return ResponseEntity.status(HttpStatus.CREATED).body(list);
+    }
+    
+    /**
+     * Edit the Animal Status and returns new Animal with ID
+     *
+     * @param id
+     * @param status
+     * @return Animal with ID
+     * @throws com.ecarsm.petgo.api.baseline.exception.MyException
+     */
+    @PutMapping
+    public ResponseEntity<Animal> changeStatus(@RequestParam Long id, @RequestParam Boolean status) throws MyException {
+        try {
+            Animal animal = this.service.changeStatus(id, status);
+            return ResponseEntity.status(HttpStatus.OK).body(animal);
+        } catch (Exception ex) {
+            throw new MyException("msg.animal.create.error");
+        }
     }
 
 }

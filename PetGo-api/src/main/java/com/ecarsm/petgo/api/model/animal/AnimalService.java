@@ -23,4 +23,14 @@ public class AnimalService {
     public Animal save(Animal animal) throws MyException {
         return this.rep.save(animal);
     }
+
+    public Animal getOne(Long id) throws MyException {
+        return this.rep.getOne(id);
+    }
+
+    public Animal changeStatus(Long id, Boolean status) throws MyException {
+        Animal animal = this.getOne(id);
+        animal.setStatus(status);
+        return this.save(animal);
+    }
 }

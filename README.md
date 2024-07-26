@@ -13,6 +13,7 @@ Full documentation can be seen at `http://localhost:8080/swagger-ui.html`
 ## Endpoints
 - [GET] `/animal` returns all animals.
 - [POST] `/animal` creates a new animal.
+- [PUT] `/animal` changes an animal status.
 
 ## Endpoints
 
@@ -74,6 +75,11 @@ Response:
 }
 ```
 Response: `Status: 201 Created`
+
+
+### 3: [PUT] `/animal?id=1&status=true`
+
+Response: `Status: 200 Ok`
 
 ## Local Running
 
