@@ -1,0 +1,8 @@
+/PetGo-api/target/
+/PetGo-api/nb-configuration.xml
+/PetGo-api/nbactions.xml
+
+/PetGo-cli/node_modules/
+/PetGo-cli/build/
+/PetGo-cli/.vscode
+/PetGo-cli/yarn.lock

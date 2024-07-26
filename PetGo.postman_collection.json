@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "f54eb2c7-7167-4b14-a2f6-8a21156e00b5",
+		"name": "PetGo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3776563"
+	},
+	"item": [
+		{
+			"name": "New Animal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bill\",\r\n    \"description\":\"Loren Ipsum 123\",\r\n    \"imageUrl\":\"https://\",\r\n    \"category\": {\r\n            \"id\": 1,\r\n            \"name\": \"Dog\"\r\n        },\r\n    \"birthDate\":\"2007-12-03\",\r\n    \"status\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PetGo-api/animal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PetGo-api",
+						"animal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Animal",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/PetGo-api/animal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PetGo-api",
+						"animal"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
