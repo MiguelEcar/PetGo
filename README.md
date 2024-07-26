@@ -11,8 +11,8 @@ Full documentation can be seen at `http://localhost:8080/swagger-ui.html`
 
 
 ## Endpoints
-- [GET] `/animal` returns all doctors.
-- [POST] `/animal` creates a new doctor.
+- [GET] `/animal` returns all animals.
+- [POST] `/animal` creates a new animal.
 
 ## Endpoints
 
